@@ -1,0 +1,12 @@
+name: 'Tencent SCF Action'
+description: Github action for serverless cloud framework
+runs:
+  using: 'composite'
+  steps:
+    - run: npm i -g serverless-cloud-framework
+      shell: bash
+    - run: scf deploy --debug
+      shell: bash
+branding:
+  icon: 'upload-cloud' 
+  color: blue
